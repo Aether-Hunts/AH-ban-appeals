@@ -8,15 +8,49 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
 
-        <title>Ban appeal</title>
-    </head>
-    <body class="h-100 d-flex flex-column justify-content-center align-items-stretch">
-        <div class="jumbotron text-center mb-0">
-            <h1>Ban appeal</h1>
-        </div>
+        <title>Fleet Ban Appeal</title>
+        <script type="text/javascript">
+            ImageArray = new Array();
+            ImageArray[0] = 'https://i.imgur.com/jM2yBVU.png';
+            ImageArray[1] = 'https://i.imgur.com/Rip6XuH.png';
+            ImageArray[2] = 'https://i.imgur.com/1NdluMK.jpg';
+            ImageArray[3] = 'https://i.imgur.com/ykOFUVO.png';
+            ImageArray[4] = 'https://i.imgur.com/f3wKKgN.png';
 
+
+            function getRandomImage() {
+                var num = Math.floor( Math.random() * 5);
+                var img = ImageArray[num];
+                document.getElementById("randImage").innerHTML = ('<center><img src="' + img + '" width="500px" height="500px"></center>')
+
+            }
+        </script>
+    </head>
+    <body class="h-100 d-flex flex-column justify-content-center align-items-stretch" onload="getRandomImage()">
+        <div class="jumbotron text-center mb-0">
+            <h1>Aetherhunts (<a href="http://discord.gg/Aetherhunts">http://discord.gg/Aetherhunts</a>) ban appeal</h1>
+            <h3><font color="white">This will link your discord account with our ban appeal bot and let you to fill out a form to appeal your ban. Misuse of this form will result in your discord account being blocked from sending appeals.</font></h3>
+        </div>
         <div class="flex-fill text-center d-flex h-100 justify-content-center align-items-center">
             <a class="btn" id="login" style="font-size: 2rem;" href="/.netlify/functions/oauth">Login with Discord</a>
         </div>
+        <script>
+            function generateRandomString() {
+                const rand = Math.floor(Math.random() * 10);
+                let randStr = "";
+
+                for (let i = 0; i < 20 + rand; i++) {
+                    randStr += String.fromCharCode(33 + Math.floor(Math.random() * 94));
+                }
+
+                return randStr;
+            }
+
+            const state = generateRandomString();
+            localStorage.setItem("state", state);
+
+            document.getElementById("login").href += `?state=${encodeURIComponent(state)}`;
+        </script>
+        <div id="randImage"></div>
     </body>
 </html>

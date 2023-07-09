@@ -1,4 +1,22 @@
-# Discord Ban Appeals
+
+
+# Aether Hunt Ban Appeal
+
+
+### Click this button to Access Deployment:  
+   [![Access Netlify Deployment](https://www.netlify.com/img/deploy/button.svg)](
+https://app.netlify.com/sites/endearing-licorice-619d28/deploys)
+
+### * The current site-name is: **endearing-licorice-619d28**
+### We will update this once the domain has been transferred to this app.
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+# Creating your own Instance
 
 This is a form that allows users to appeal their bans from a Discord server.
 

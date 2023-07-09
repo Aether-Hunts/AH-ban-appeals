@@ -7,12 +7,15 @@
    [![Access Netlify Deployment](https://www.netlify.com/img/deploy/button.svg)](
 https://app.netlify.com/sites/endearing-licorice-619d28/deploys)
 
-### * The current site-name is: **endearing-licorice-619d28**
-### We will update this once the domain has been transferred to this app.
+### Click here to Access the App
+https://endearing-licorice-619d28.netlify.app
 
 <br />
 <br />
-<br />
+
+### * The current site-name is: **endearing-licorice-619d28**
+### We will update the domain name once the name has been transferred to this app.
+
 <br />
 <br />
 

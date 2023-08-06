@@ -11,6 +11,14 @@ https://app.netlify.com/sites/aether-hunts-ban-appeals/deploys)
 ### Click here to Access the App
 https://aether-hunts-ban-appeals.netlify.app/
 
+### To run Locally
+
+`npm install netlify-cli -g`
+
+`npm install`
+
+`netlify dev`
+
 <br />
 <br />
 

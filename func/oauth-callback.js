@@ -65,7 +65,6 @@ export async function handler(event, context) {
             if (process.env.GUILD_ID && !process.env.SKIP_BAN_CHECK) {
                 const ban = await getBan(user.id, process.env.GUILD_ID, process.env.DISCORD_BOT_TOKEN);
                 if (ban === null) {
-                    console.log("data", data)
                     return {
                         statusCode: 303,
                         headers: {

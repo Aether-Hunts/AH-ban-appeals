@@ -6,10 +6,10 @@
 
 ### Click this button to Access Deployment:  
    [![Access Netlify Deployment](https://www.netlify.com/img/deploy/button.svg)](
-https://app.netlify.com/sites/aether-hunts-ban/deploys)
+https://app.netlify.com/sites/aether-hunts-ban-appeals/deploys)
 
 ### Click here to Access the App
-https://aether-hunts-ban.netlify.app/
+https://aether-hunts-ban-appeals.netlify.app/
 
 <br />
 <br />

@@ -123,7 +123,7 @@ export async function handler(event, context) {
                 throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages`);
             }
         } catch (e) {
-            throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages ${e}`);
+            throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages - ${e}`);
         }
     }
 

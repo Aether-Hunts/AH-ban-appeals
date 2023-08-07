@@ -119,11 +119,11 @@ export async function handler(event, context) {
             }
         } else {
             console.log(JSON.stringify(await result.json()));
-            throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages ${{headers: {
+            throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages ${JSON.stringify({headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bot [Redacted]`
             },
-            body: JSON.stringify(message)}}`);
+            body: JSON.stringify(message)})}`);
         }
     }
 

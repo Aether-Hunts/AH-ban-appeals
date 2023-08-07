@@ -102,7 +102,7 @@ export async function handler(event, context) {
                 "Authorization": `Bot ${process.env.DISCORD_BOT_TOKEN}`
             },
             body: JSON.stringify(message)
-        })
+        });
 
         if (result.ok) {
             if (process.env.USE_NETLIFY_FORMS) {
@@ -119,11 +119,7 @@ export async function handler(event, context) {
             }
         } else {
             console.log(JSON.stringify(await result.json()));
-            throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages ${JSON.stringify({headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bot [Redacted]`
-            },
-            body: JSON.stringify(message)})}`);
+            throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages`);
         }
     }
 

@@ -104,7 +104,7 @@ export async function handler(event, context) {
             body: JSON.stringify(message)
         })
 
-        // if (result.ok) {
+        if (result.ok) {
             if (process.env.USE_NETLIFY_FORMS) {
                 return {
                     statusCode: 200
@@ -117,10 +117,14 @@ export async function handler(event, context) {
                     }
                 };
             }
-        // } else {
-        //     console.log(JSON.stringify(await result.json()));
-        //     throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages`);
-        // }
+        } else {
+            console.log(JSON.stringify(await result.json()));
+            throw new Error(`Failed to submit message to ${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages ${{headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bot [Redacted]`
+            },
+            body: JSON.stringify(message)}}`);
+        }
     }
 
     return {

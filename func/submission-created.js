@@ -82,6 +82,9 @@ export async function handler(event, context) {
                 const unbanInfo = {
                     userId: userInfo.id
                 };
+
+                console.log("A", unbanInfo);
+                console.log("B", encodeURIComponent(createJwt(unbanInfo)));
     
                 message.components = [{
                     type: 1,
